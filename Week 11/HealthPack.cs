@@ -18,9 +18,8 @@ public class HealthPack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
 
-            if (playerHealth.health != 100)
+        if (other.CompareTag("Player") && playerHealth.health < 100)
         {
             playerHealth.health += 10;
 
